@@ -38,8 +38,6 @@ a {
 #header {
   background-color: var(--background-color-dark);
   padding-bottom: 40px;
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
 }
 
 /* Navbar */
@@ -102,6 +100,8 @@ a {
   flex-direction: column;
   justify-content: center;
   line-height: 1.2;
+  border-radius: 10px;
+
 }
 
 .info-header {
@@ -131,22 +131,123 @@ a {
 }
 
 
-/* Media Query */
+/* MAIN */
+#main {
+  padding: 40px 0;
+  color: var(--background-color-dark);
+  background-color: var(--background-color-light);
+  display: flex;
+  flex-direction: column;
+}
+
+#section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* First section */
+.nasa {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.nasa-header {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 36px;
+  font-weight: 900;
+  padding-bottom: 11px;
+  width: 80%;
+  border-bottom: var(--background-color-darker) solid 1px;
+}
+
+.nasa-tag {
+  color: var(--button-color);
+  font-size: 36px;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:  10px;
+
+  /* margin: 0 auto; */
+}
+
+.card {
+  width: 20%;
+
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light);
+  border-radius: 10px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  flex: 1 1 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+
+  flex: 1 1 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width:1000px) {
+  .nasa-header {
+    width: 70%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width:800px) {
   #info {
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
   }
 
   .info {
-    max-height: 200px;
+    max-height: 260px;
     max-width: 360px;
   }
 
   .info-header {
     font-weight: 600;
     font-size: 24px;
+  }
+  
+  .card {
+    width: 80%;
+  }
+
+  .nasa-header,
+  .nasa-tag {
+    font-size: 24px;
+    font-weight: 600;
   }
 }
 
@@ -176,12 +277,20 @@ a {
 @media only screen and (max-width:409px) {
   
   .info {
+    max-height: 200px;
     max-width: 300px;
     padding: 0 22px;
-    overflow: hidden;
+  }
+  
+  .info-header {
+    padding-bottom: 8px;
   }
 
-  .info-header {
-    padding: 22px 0;
+  #info {
+    margin: 40px 0;
+
+  }
+  .btn {
+    width: 100%;
   }
 }
