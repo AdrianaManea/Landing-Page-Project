@@ -38,6 +38,8 @@ a {
 #header {
   background-color: var(--background-color-dark);
   padding-bottom: 40px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
 }
 
 /* Navbar */
@@ -89,6 +91,7 @@ a {
 #info {
   display: flex;
   gap: 22px;
+  /* padding: 0 10px; */
 }
 
 .info {
@@ -138,13 +141,12 @@ a {
 
   .info {
     max-height: 200px;
-    width: 400px;
+    max-width: 400px;
   }
 
   .info-header {
     font-weight: 600;
     font-size: 24px;
-
   }
 }
 
@@ -167,5 +169,18 @@ a {
 
   .logo {
     display: block;
+  }
+
+}
+
+@media only screen and (max-width:450px) {
+  
+  .info {
+    max-width: 300px;
+    padding: 0 20px;
+  }
+
+  .info-header {
+    padding: 11px 0;
   }
 }
