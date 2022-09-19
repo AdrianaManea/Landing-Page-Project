@@ -391,6 +391,29 @@ a {
     display: block;
   }
 
+  .testimonial {
+    line-height: 23px;
+  }
+
+  .user {
+    gap: 12px;
+  }
+
+  .user .user-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .user .user-details {
+    gap: 4px;
+  }
+  .user .user-name {
+    font-size: 18px;
+  }
+  
+  .user .role {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width:409px) {

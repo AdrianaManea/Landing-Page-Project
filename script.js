@@ -21,7 +21,7 @@ const testimonials = [
     name: 'Sally Ride, 1983',
     position: 'Astronaut',
     photo: './img/mission-milestone-sally-ride-sts-7.jpeg',
-    text: 'The starts don\'t look bigger, but they do look brighter.',
+    text: 'The stars don\'t look bigger, but they do look brighter.',
   },
   {
     name: 'John Young, 1981',
