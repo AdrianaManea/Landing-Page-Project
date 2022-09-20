@@ -50,4 +50,4 @@ function updateTestimonials() {
   }
 }
 
-setInterval(updateTestimonials, 10000)
+// setInterval(updateTestimonials, 10000)
