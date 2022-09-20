@@ -20,6 +20,8 @@
   --button-color: #3882F6;
 
   --text-color-light: #f9faf8;
+
+  --border-size: 2px;
 }
 
 body {
@@ -126,14 +128,47 @@ a {
 .btn {
   display: block;
   width: 140px;
-  margin: 18px 0;
+  margin: 18px 0 ;
   padding: 7px 14px;
+  
   border-radius: 6px;
   border: none;
+  outline: none;
+
   font-size: 16px;
   background-color: var(--button-color);
   color: var(--text-color-light);
+
+  cursor: pointer;
+  position: relative;
 }
+
+
+.btn.btn-border-pop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: var(--border-size) solid var(--background-color-light);
+  border-radius: 6px;
+  z-index: -1;
+
+  transition: all 100ms ease-in-out;
+}
+
+.btn.btn-border-pop:hover::before,
+.btn.btn-border-pop:focus::before {
+  top: calc(var(--border-size) * -2);
+  left: calc(var(--border-size) * -2);
+  right: calc(var(--border-size) * -2);
+  bottom: calc(var(--border-size) * -2);
+
+  z-index: 1;
+}
+
 
 .info-image {
   background: url(./img/nasa-Q1p7bh3SHj8-unsplash.jpeg) no-repeat center bottom/cover;
@@ -151,7 +186,7 @@ a {
   gap: 60px;
 }
 
-#section {
+.section {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -159,7 +194,7 @@ a {
 
 
 /* First section */
-.nasa {
+.nasa-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -171,7 +206,8 @@ a {
   margin: 0 auto;
   font-size: 36px;
   font-weight: 900;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
+  padding-top: 12px;
   width: 80%;
   border-bottom: var(--background-color-darker) solid 1px;
 }
@@ -299,7 +335,7 @@ a {
 
 @keyframes grow {
   0% {
-    /* transform: scaleX(0); */
+    transform: scaleX(0);
   }
 }
 
