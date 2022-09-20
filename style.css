@@ -332,6 +332,21 @@ a {
 
 
 
+/* FOOTER */
+#footer-container {
+  background-color: var(--background-color-dark);
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-copyright {
+  padding: 10px 20px;
+}
+
+
 /* MEDIA QUERY */
 @media only screen and (max-width:999px) {
   .nasa-header {
